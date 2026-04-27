@@ -94,20 +94,22 @@ export default function Hero() {
 
         {/* Right — device mockup (desktop only) */}
         <div className="hero-visual hidden lg:flex lg:items-center lg:justify-center">
-          <div className="relative w-full max-w-[520px]">
+          <div className="relative w-full overflow-hidden">
+            {/* Purple glow */}
             <div
               ref={glowRef}
-              className="pointer-events-none absolute inset-0 scale-[1.5] bg-purple-glow-radial opacity-55 blur-3xl"
+              className="pointer-events-none absolute inset-0 scale-[1.4] bg-purple-glow-radial opacity-50 blur-3xl"
             />
             <img
               src="/mockups/hero-device-render.png"
               alt="Laptop and phone mockup for AVL Innovation"
-              className="relative h-auto w-full object-contain opacity-95 mix-blend-screen drop-shadow-[0_24px_80px_rgba(124,58,237,0.4)]"
+              className="relative h-auto w-full object-contain mix-blend-screen"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_62%_50%,transparent_28%,rgba(10,8,24,0.55)_72%,rgba(10,8,24,0.9)_100%)]" />
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-bg to-transparent" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bg to-transparent" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg/70 to-transparent" />
+            {/* Edge fades — hardcoded bg colour so they always match */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-32" style={{ background: 'linear-gradient(to bottom, #0a0818 0%, transparent 100%)' }} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40" style={{ background: 'linear-gradient(to top, #0a0818 0%, transparent 100%)' }} />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3" style={{ background: 'linear-gradient(to right, #0a0818 0%, transparent 100%)' }} />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4" style={{ background: 'linear-gradient(to left, #0a0818 0%, transparent 100%)' }} />
           </div>
         </div>
 
