@@ -221,7 +221,7 @@ export default function InstagramSection() {
             </div>
           </div>
 
-          {/* Right — LightWidget embed in white card */}
+          {/* Right — CSS profile card */}
           <div className="flex justify-center lg:justify-end">
             <div style={{
               background: '#ffffff',
@@ -232,13 +232,7 @@ export default function InstagramSection() {
               width: '100%',
               maxWidth: '100%',
             }}>
-              <iframe
-                src="//lightwidget.com/widgets/f5f96306d562505b975f1a5a09a41b0a.html"
-                scrolling="no"
-                allowTransparency
-                className="lightwidget-widget"
-                style={{ width: '100%', border: 0, overflow: 'hidden', display: 'block' }}
-              />
+              <InstagramProfileCard />
             </div>
           </div>
         </div>
