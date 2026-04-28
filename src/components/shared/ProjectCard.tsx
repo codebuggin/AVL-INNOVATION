@@ -10,7 +10,7 @@ export default function ProjectCard({ project, large = false }: { project: Proje
           <img
             src={project.imageUrl}
             alt={`${project.client} project preview`}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+            className="h-full w-full object-cover object-left-top transition duration-500 group-hover:scale-[1.04]"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-text-muted">
