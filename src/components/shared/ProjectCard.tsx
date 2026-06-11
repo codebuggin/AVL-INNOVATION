@@ -2,6 +2,7 @@ import type { Project } from '../../config/projects'
 
 export default function ProjectCard({ project, large = false }: { project: Project; large?: boolean }) {
   const isLive = project.status === 'live'
+  const imageFitClass = project.imageFit === 'contain' ? 'object-contain object-center' : 'object-cover object-left-top'
 
   return (
     <article className="group overflow-hidden rounded-2xl border border-border bg-card-gradient transition duration-400 hover:scale-[1.02] hover:border-purple/40">
@@ -10,7 +11,7 @@ export default function ProjectCard({ project, large = false }: { project: Proje
           <img
             src={project.imageUrl}
             alt={`${project.client} project preview`}
-            className="h-full w-full object-cover object-left-top transition duration-500 group-hover:scale-[1.04]"
+            className={`h-full w-full ${imageFitClass} transition duration-500 group-hover:scale-[1.04]`}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-text-muted">

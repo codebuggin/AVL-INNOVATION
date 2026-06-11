@@ -4,6 +4,13 @@ import { gsap } from 'gsap'
 import { projects } from '../../config/projects'
 import ProjectCard from '../shared/ProjectCard'
 
+// Curated set shown in the homepage "Recent projects" section.
+// Diesel Opticals and Lavish Caterers remain in the full /work portfolio.
+const featuredSlugs = ['taseer-ayurved', 'dr-syeds-clinic', 'dr-prudhvi', 'raabbtaa-lead-gen']
+const featuredProjects = featuredSlugs
+  .map((slug) => projects.find((project) => project.slug === slug))
+  .filter((project): project is (typeof projects)[number] => Boolean(project))
+
 export default function PortfolioTeaser() {
   const ref = useRef<HTMLElement | null>(null)
 
@@ -24,7 +31,7 @@ export default function PortfolioTeaser() {
         <Link to="/work" className="mt-6 inline-block text-purple-light md:mt-0">View all projects →</Link>
       </div>
       <div className="mt-16 grid gap-8 lg:grid-cols-2">
-        {projects.slice(0, 4).map((project) => (
+        {featuredProjects.map((project) => (
           <div key={project.slug} className="portfolio-card">
             <ProjectCard project={project} />
           </div>
