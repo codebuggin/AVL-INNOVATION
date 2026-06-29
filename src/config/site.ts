@@ -17,12 +17,6 @@ export const site = {
       bio: 'Leads engineering and product. Focused on building digital products that ship fast and perform well.',
       imageUrl: '/mockups/founder-abubakr.jpg',
     },
-    {
-      name: 'K Christina Margaret',
-      role: 'Co-Founder & Creative Director',
-      bio: 'Leads design and brand. Focused on creating interfaces that feel premium and convert visitors into clients.',
-      imageUrl: '/mockups/founder-christina.jpg',
-    },
   ],
   navLinks: [
     { label: 'Home', to: '/' },

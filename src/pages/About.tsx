@@ -15,7 +15,7 @@ export default function About() {
     <main>
       <section className="mx-auto max-w-[900px] px-6 pb-24 pt-40 text-center">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-purple-light">ABOUT US</p>
-        <h1 className="mx-auto mt-5 max-w-4xl break-words font-display text-[clamp(3rem,11vw,4.5rem)] font-extrabold leading-tight">Two founders. One mission.</h1>
+        <h1 className="mx-auto mt-5 max-w-4xl break-words font-display text-[clamp(3rem,11vw,4.5rem)] font-extrabold leading-tight">One founder. One mission.</h1>
         <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-text-soft">
           We started AVL Innovation to help businesses get the kind of websites and apps usually reserved for big companies.
         </p>
