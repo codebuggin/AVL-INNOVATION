@@ -59,13 +59,13 @@ export default function About() {
       <section className="border-y border-border bg-bg-elevated py-32">
         <div className="mx-auto max-w-[1200px] px-6">
           <SectionHeader eyebrow="MEET THE FOUNDERS" title="The people behind AVL." />
-          <div className="mt-16 grid gap-12 lg:grid-cols-2">
+          <div className={`mt-16 grid gap-12 ${site.founders.length > 1 ? 'lg:grid-cols-2' : 'mx-auto max-w-xl text-center'}`}>
             {site.founders.map((founder) => (
               <article key={founder.name}>
                 <h3 className="font-display text-3xl font-extrabold">{founder.name}</h3>
                 <p className="mt-2 font-medium text-purple-light">{founder.role}</p>
                 <p className="mt-4 leading-relaxed text-text-soft">{founder.bio}</p>
-                <div className="mt-6 flex gap-5 text-sm text-text-muted">
+                <div className={`mt-6 flex gap-5 text-sm text-text-muted ${site.founders.length > 1 ? '' : 'justify-center'}`}>
                   <a href={site.contact.instagramLink} target="_blank" rel="noopener noreferrer" className="hover:text-purple-light">Instagram</a>
                   <a href={`mailto:${site.contact.email}`} className="hover:text-purple-light">Email</a>
                 </div>
